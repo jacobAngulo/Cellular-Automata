@@ -12,7 +12,7 @@ import {
 import "./index.css";
 
 const App = () => {
-  const [size, setSize] = useState(50);
+  const [size, setSize] = useState(60);
   const [population, setPopulation] = useState(0);
   const [running, setRunning] = useState(false);
   const [grid, setGrid] = useState([]);
@@ -157,7 +157,7 @@ const App = () => {
           <p className="bold">{"\n\n"}RULES:</p>
           <p>
             <span className="bold">#1:</span> Any cell with fewer than 2 living
-            neighbors die via underpopulation or exposure
+            neighbors dies via underpopulation or exposure
           </p>
           <p>
             <span className="bold">#2:</span> Any cell with more than 3
