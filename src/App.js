@@ -210,36 +210,6 @@ const App = () => {
           <div className="sizes-control-panel">
             <button
               className={`button ${
-                size === 20
-                  ? running
-                    ? "disabled-active"
-                    : "active"
-                  : running
-                  ? "disabled"
-                  : ""
-              }`}
-              disabled={running}
-              onClick={() => changeSize(20)}
-            >
-              20 x 20
-            </button>
-            <button
-              className={`button ${
-                size === 30
-                  ? running
-                    ? "disabled-active"
-                    : "active"
-                  : running
-                  ? "disabled"
-                  : ""
-              }`}
-              disabled={running}
-              onClick={() => changeSize(30)}
-            >
-              30 x 30
-            </button>
-            <button
-              className={`button ${
                 size === 40
                   ? running
                     ? "disabled-active"
@@ -255,7 +225,7 @@ const App = () => {
             </button>
             <button
               className={`button ${
-                size === 50
+                size === 60
                   ? running
                     ? "disabled-active"
                     : "active"
@@ -264,9 +234,39 @@ const App = () => {
                   : ""
               }`}
               disabled={running}
-              onClick={() => changeSize(50)}
+              onClick={() => changeSize(60)}
             >
-              50 x 50
+              60 x 60
+            </button>
+            <button
+              className={`button ${
+                size === 80
+                  ? running
+                    ? "disabled-active"
+                    : "active"
+                  : running
+                  ? "disabled"
+                  : ""
+              }`}
+              disabled={running}
+              onClick={() => changeSize(80)}
+            >
+              80 x 80
+            </button>
+            <button
+              className={`button ${
+                size === 100
+                  ? running
+                    ? "disabled-active"
+                    : "active"
+                  : running
+                  ? "disabled"
+                  : ""
+              }`}
+              disabled={running}
+              onClick={() => changeSize(100)}
+            >
+              100 x 100
             </button>
           </div>
         </div>
