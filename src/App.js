@@ -174,7 +174,7 @@ const App = () => {
             neighbors survives to the next generation
           </p>
           <p>
-            <span className="bold">#3:</span> Any dead cell with exactly 3
+            <span className="bold">#4:</span> Any dead cell with exactly 3
             living neighbors will come to life
           </p>
         </div>
