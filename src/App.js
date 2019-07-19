@@ -101,12 +101,16 @@ const App = () => {
         nextPopulation++;
       }
     }
-    if (nextPopulation === 0 || assessment.toString() === grid.toString()) {
+    if (nextPopulation === 0 || nextIteration.toString() === grid.toString()) {
       setRunning(false);
+      setGrid(nextIteration);
+      setGeneration(generation + 1);
+      setPopulation(nextPopulation);
+    } else {
+      setGrid(nextIteration);
+      setGeneration(generation + 1);
+      setPopulation(nextPopulation);
     }
-    setGrid(nextIteration);
-    setGeneration(generation + 1);
-    setPopulation(nextPopulation);
   };
 
   const changeSize = num => {
@@ -117,7 +121,9 @@ const App = () => {
     <div className="app">
       <div className="game-panel">
         <div>
-          <p className="bold">generation: {generation}</p>
+          <p className="generation">
+            <span className="bold">generation:</span> {generation}
+          </p>
         </div>
         <div className="grid">
           {grid.map((node, i) => {
@@ -160,11 +166,11 @@ const App = () => {
             neighbors dies via underpopulation or exposure
           </p>
           <p>
-            <span className="bold">#2:</span> Any cell with more than 3
+            <span className="bold">#2:</span> Any cell with more than 3 living
             neighbors dies via overpopulation or crowding
           </p>
           <p>
-            <span className="bold">#3:</span> Any live cell with 2 or 3 living
+            <span className="bold">#3:</span> Any living cell with 2 or 3 living
             neighbors survives to the next generation
           </p>
           <p>
